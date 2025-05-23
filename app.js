@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const custom_middlewares = require("./utils/middleware");
 
@@ -6,6 +7,7 @@ const custom_middlewares = require("./utils/middleware");
 app.use(express.json());  // 替代body-parser
 app.use(express.urlencoded({ extended: true }));
 app.use(custom_middlewares.request_logger_middleware);
+app.use(cors());  // 跨域
 
 // 路由
 const apiRouter = require("./routes/api");
