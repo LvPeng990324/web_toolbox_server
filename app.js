@@ -10,9 +10,7 @@ app.use(custom_middlewares.request_logger_middleware);
 app.use(cors());  // 跨域
 
 // 路由
-const apiRouter = require("./routes/api");
 const userApiRouter = require("./routes/user_api");
-app.use("/api", apiRouter);
 app.use("/user-api", userApiRouter);
 
 // 404处理
