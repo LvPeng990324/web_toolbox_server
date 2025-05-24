@@ -36,4 +36,26 @@ router.post("/add", async (req, res) => {
     });
 });
 
+// 登录
+router.post("/login", async (req, res) => {
+    res.json({
+        code: 0,
+        message: "登录成功",
+        data: {
+            token: "token-admin",
+        },
+    });
+});
+
+// 获取用户信息
+router.get("/get-user-info", async (req, res) => {
+    res.json({
+        code: 0,
+        message: "获取成功",
+        data: {
+            username: "1111",
+        }
+    })
+})
+
 module.exports = router;
