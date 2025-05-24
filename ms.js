@@ -1,3 +1,6 @@
+// system
+exports.server_config = require('./server_config');
+
 // utils
 exports.db = require('./utils/db');
 exports.log = require('./utils/log');

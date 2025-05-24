@@ -1,10 +1,6 @@
 const mysql = require('mysql2');
+const server_config = require('../server_config');
 
-const pool = mysql.createPool({
-    host: 'localhost', // 数据库主机
-    user: 'root',      // 数据库用户名
-    password: '123456', // 数据库密码
-    database: 'test_sql' // 数据库名称
-});
+const pool = mysql.createPool(server_config.db_config);
 
 module.exports = pool.promise();
