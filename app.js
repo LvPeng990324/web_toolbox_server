@@ -5,10 +5,11 @@ const cors = require("cors");
 const app = express();
 
 // 中间件
+app.use(cors());  // 跨域
 app.use(express.json());  // 替代body-parser
 app.use(express.urlencoded({ extended: true }));
 app.use(ms.middleware.request_logger_middleware);
-app.use(cors());  // 跨域
+app.use(ms.middleware.permission_check_middleware);
 
 // 路由
 app.use("/user-api", ms.user_api.router);

@@ -1,6 +1,7 @@
 // 逻辑返回码定义
 const RETURN_CODE = {
     success: 0,
+    auth_err: 1,  // 用户名密码错误
 };
 
 

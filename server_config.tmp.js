@@ -13,3 +13,6 @@ exports.redis_config = {
 
 // 服务器启动端口
 exports.server_port = 3000;
+
+// token过期时间，毫秒
+exports.token_expire_ms = 7 * 24 * 60 * 60 * 1000;
